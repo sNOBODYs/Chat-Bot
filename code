@@ -1,0 +1,60 @@
+using System;
+
+namespace Chat_Bot
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string oplakvane = "";
+
+            while (true)
+            {
+                if (oplakvane == "END" || oplakvane == "end")
+                {
+                    return;
+                }
+
+                Console.WriteLine("These are the rules we made up.");
+                Console.WriteLine();
+                Console.WriteLine("1. The discussion or comments abut politics is banned.");
+                Console.WriteLine("2. The students must be in class.");
+                Console.WriteLine("3. Everyone has to be a part from discussions.");
+                Console.WriteLine("4. If students in 5 minutes or more are late for class, and this activity repeats it's self all the time, they will be warned for being suspanded from the school.");
+                Console.WriteLine("5. All rules are equal, but some are more equal than others.");
+                Console.WriteLine();
+
+                Console.WriteLine("Is there a rule with which you disagree?");
+                int input = int.Parse(Console.ReadLine());
+
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("Why don't you agree with rule one?");
+                        break;
+                    case 2:
+                        Console.WriteLine("Why don't you agree with rule two?");
+                        break;
+                    case 3:
+                        Console.WriteLine("Why don't you agree with rule three?");
+                        break;
+                    case 4:
+                        Console.WriteLine("Why don't you agree with rule four?");
+                        break;
+                    case 5:
+                        Console.WriteLine("Why don't you agree with rule five?");
+                        break;
+                }
+
+                oplakvane = Console.ReadLine();
+                Console.WriteLine("Thanks for the feedback!");
+                Console.WriteLine("If you want to comment on other rule type in yes, if you don't want to type in END/end.");
+
+                oplakvane = Console.ReadLine();
+                Console.Clear();
+            }
+
+            
+        }
+    }
+}
